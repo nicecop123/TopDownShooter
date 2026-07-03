@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://xr030n5f3sja"]
+
+[ext_resource type="Texture2D" uid="uid://ddl1m4dni1r26" path="res://assets/art/32rogues/tiles.png" id="1_cabyq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cabyq"]
+size = Vector2(5, 10.75)
+
+[node name="Tree" type="StaticBody2D" unique_id=1367184562]
+y_sort_enabled = true
+collision_layer = 256
+collision_mask = 0
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=485215682]
+position = Vector2(-1, -28)
+texture = ExtResource("1_cabyq")
+region_enabled = true
+region_rect = Rect2(96, 773, 30, 56)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1626226245]
+position = Vector2(0, -6.625)
+shape = SubResource("RectangleShape2D_cabyq")

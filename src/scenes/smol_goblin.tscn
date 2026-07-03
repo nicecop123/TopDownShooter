@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://dso8qhp4xh5f0"]
+
+[ext_resource type="Script" uid="uid://60hcrbpiyax6" path="res://src/scripts/smol_goblin.gd" id="1_2xwi3"]
+[ext_resource type="Texture2D" uid="uid://cwako805nfyoc" path="res://assets/art/32rogues/monsters.png" id="1_olvda"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_olvda"]
+radius = 7.0
+height = 16.0
+
+[node name="SmolGoblin" type="CharacterBody2D" unique_id=15032220]
+y_sort_enabled = true
+collision_layer = 2
+collision_mask = 386
+script = ExtResource("1_2xwi3")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=71479176]
+position = Vector2(2, -13)
+texture = ExtResource("1_olvda")
+region_enabled = true
+region_rect = Rect2(64, 0, 32, 32)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=932335129]
+position = Vector2(-1, -8)
+shape = SubResource("CapsuleShape2D_olvda")

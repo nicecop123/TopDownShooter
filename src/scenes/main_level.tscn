@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://bpxo8ru7ubyjy"]
+
+[ext_resource type="PackedScene" uid="uid://crfpdjhh587q5" path="res://src/scenes/player.tscn" id="1_bs2gy"]
+[ext_resource type="Script" uid="uid://dccvcq6qso3hd" path="res://src/scripts/map_manager.gd" id="2_bs2gy"]
+
+[node name="MainLevel" type="Node2D" unique_id=2057921574]
+y_sort_enabled = true
+
+[node name="MapManager" type="Node2D" parent="." unique_id=2020715540 node_paths=PackedStringArray("player")]
+z_index = -10
+y_sort_enabled = true
+script = ExtResource("2_bs2gy")
+player = NodePath("../Entities/Player")
+
+[node name="Entities" type="Node2D" parent="." unique_id=212338812]
+y_sort_enabled = true
+
+[node name="Player" parent="Entities" unique_id=1748734127 instance=ExtResource("1_bs2gy")]
+
+[node name="BaseTerrain" type="Node2D" parent="." unique_id=933509619]
+z_index = -10

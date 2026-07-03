@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://dahriebdi1ixo"]
+
+[ext_resource type="Texture2D" uid="uid://d2s63bmln68n8" path="res://assets/art/guns/US.png" id="1_xfvrx"]
+[ext_resource type="Script" uid="uid://bme603xvo3bss" path="res://src/scripts/gun.gd" id="1_xkiar"]
+
+[node name="Gun" type="Node2D" unique_id=978512798]
+script = ExtResource("1_xkiar")
+
+[node name="WeaponPivot" type="Marker2D" parent="." unique_id=810193311]
+
+[node name="GunImage" type="Sprite2D" parent="WeaponPivot" unique_id=112892271]
+position = Vector2(14, 0)
+texture = ExtResource("1_xfvrx")
+region_enabled = true
+region_rect = Rect2(0, 0, 32, 15)
+
+[node name="Muzzle" type="Marker2D" parent="WeaponPivot/GunImage" unique_id=121533891]
+position = Vector2(5, -1)
